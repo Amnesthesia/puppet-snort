@@ -106,7 +106,7 @@ config detection: search-method ac-bnfa search-optimize max-pattern-len 20
 # Configure the event queue.  For more information, see README.event_queue
 config event_queue: max_queue 8 log 3 order_events content_length
 
-<% if snort_perfprofile  == "true" then %>
+<% if @snort_perfprofile  == "true" then %>
 ###################################################
 # Configure Perf Profiling for debugging
 # For more information see README.PerfProfiling
@@ -127,7 +127,7 @@ config paf_max: 16000
 # For more information, see Snort Manual, Configuring Snort - Dynamic Modules
 ###################################################
 
-<% if architecture == "x86_64" %>
+<% if @architecture == "x86_64" %>
 # path to dynamic preprocessor libraries
 dynamicpreprocessor directory /usr/lib64/snort-2.9.4_dynamicpreprocessor
 # path to base preprocessor engine
@@ -383,7 +383,7 @@ preprocessor dnp3: ports { 20000 } \
 # For more information, see Snort Manual, Configuring Snort - Output Modules
 ###################################################
 
-<% if barnyard == true -%>
+<% if @barnyard == true -%>
 # unified2
 # Recommended for most installs
 output unified2: filename /var/log/snort/snort_unified.log, limit 128
