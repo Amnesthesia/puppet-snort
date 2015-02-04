@@ -119,7 +119,7 @@ class snort::sensor ( $ip_ranges ='any' , $dns_servers = '$HOME_NET', $snort_per
       ensure => $barnyard ? {
         true    => directory,
         default => absent,
-      };
+      },
       mode   => '0660',
       owner  => 'snort',
       group  => 'snort',
