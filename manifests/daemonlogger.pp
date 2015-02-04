@@ -22,7 +22,7 @@ class snort::daemonlogger ( $interface = 'eth1', $capture_dir = '/data/capture_f
       mode   => '0755',
       owner  => 'root',
       group  => 'root';
-    "'${capture_dir}'":
+    "${capture_dir}":
       ensure => directory,
       mode   => '0644',
       owner  => 'root',
