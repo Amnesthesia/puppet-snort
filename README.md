@@ -1,6 +1,8 @@
 puppet-snort
 ============
+Forked and modified to (hopefully) work with Puppet version 3+
 
+Original README:
 Configuration templates for snort and daemonlogger.
 
 
